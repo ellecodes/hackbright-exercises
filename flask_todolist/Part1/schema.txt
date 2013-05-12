@@ -1,0 +1,40 @@
+A user can log in and view his list
+A user must be able to add a new task
+A user should be able to mark a task as complete
+
+From this list, we can identify the following nouns and attributes:
+User (noun)
+	id (attribute)
+	email
+	password
+	name
+Task (noun)
+	id (attribute)
+	title
+	created_at
+	completed_at
+
+Next, identify the relationships between our nouns:
+A User has many Tasks
+A Task belongs to a User
+
+Next, declare what column types these attributes will be:
+User
+	id - Integer, Primary Key
+	email - Varchar(64)
+	password - Varchar(64)
+	name - Varchar(64)
+Task
+	id - Integer, Primary Key
+	title - Varchar(64)
+	created_at - Datetime
+	completed_at - Datetime
+	user_id - Integer
+
+(Notice the addition of the user_id field to represent the relation)
+
+Next, take our definition and build database tables from it:
+Regarding naming conventions: the table name is a capitalized, plural version of the thing it represents.
+
+Save your script in a file named schema.sql. If you need some help, we've provided the script for you here:
+
